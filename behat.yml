@@ -1,0 +1,11 @@
+default:
+  suites:
+    issue_suite:
+      contexts: [ IssueContext ]
+      filters:
+        tags: "@issue"
+
+    project_suite:
+      contexts: [ ProjectContext ]
+      filters:
+        tags: "@project"

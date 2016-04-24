@@ -1,0 +1,46 @@
+{
+    "name": "rikbruil/jira-client",
+    "description": "Jira REST API client",
+    "keywords": ["jira", "atlassian", "rest", "api"],
+    "type": "library",
+    "require-dev": {
+        "phpspec/phpspec": "^2.5",
+        "henrikbjorn/phpspec-code-coverage": "^2.0",
+        "fabpot/php-cs-fixer": "^1.11",
+        "behat/behat": "^3.1",
+        "indigophp/doctrine-annotation-autoload": "^0.1.0",
+        "satooshi/php-coveralls": "^1.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rik Bruil",
+            "email": "rikbruil@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5",
+        "guzzlehttp/guzzle": "^6.2",
+        "jms/serializer": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rb\\JiraClient\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "spec\\Rb\\JiraClient\\": "spec/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpspec run --no-code-generation -c phpspec.ci.yml",
+        "func-test": "vendor/bin/behat --format progress",
+        "fix-style": "vendor/bin/php-cs-fixer fix"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        }
+    }
+}
